@@ -1,0 +1,5 @@
+INDEX VERSION 1.134+C:\Users\nadine ouki\Desktop\iILU\POO\TP\LesGaulois\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+21256360.index
+2515568576.index
+1307876706.index
