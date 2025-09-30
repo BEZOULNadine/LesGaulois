@@ -3,7 +3,6 @@ package personnages;
 public class Romain {
 	private String nom;
 	private int force;
-	private int forceCoup = force / 3;
 
 	public Romain(String nom, int force) {
 		this.nom = nom;
@@ -29,9 +28,11 @@ public class Romain {
 
 	public void recevoirCoup(int forceCoup) {
 		
-		if (recevoirCoup > force) {
-			
+		if (force<1) {
+			System.out.println(prendreParole()+"j'abondonne");		
 		}
-	}
+		else {
+			System.out.println(prendreParole()+"Aie")	}
+		}
 		
 }
