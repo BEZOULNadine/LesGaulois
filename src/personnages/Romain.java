@@ -18,19 +18,8 @@ public class Romain {
 		
 	}
 	private String prendreParole() {
-		// TODO Auto-generated method stub
 		return "le Romain" +  nom + ":";
 	}
-	public void recevoirCoup(int forcecoup) {
-		force-= forcecoup ;
-		if(force>0) {
-			parler("Aie");
-		} else { 
-			parler("J'abandonne");
-		}
 		
-	}
-	
-	
 
 }

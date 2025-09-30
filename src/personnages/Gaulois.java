@@ -20,14 +20,7 @@ public class Gaulois {
 		
 	}
 	private String prendreParole() {
-		// TODO Auto-generated method stub
 		return "le Gaulois" +  nom + ":"; }
 	
-	public void frapper(Romain romain ) {
-		System.out.println(nom + "envoie un grand coup dans la machoire de " + romain.getNom());
-		romain.recevoirCoup(force/3); } 
-	public String toString() { 
-		return "Gaulois[nom ="+nom +"forc="+force+"effetPotion="+ effetPotion +"]";
-	}
 
 }
