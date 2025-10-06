@@ -27,12 +27,13 @@ public class Romain {
 	}
 
 	public void recevoirCoup(int forceCoup) {
-		
+		force-=forceCoup; //romain perd de la force 
 		if (force<1) {
+			force =0;
 			System.out.println(prendreParole()+"j'abondonne");		
 		}
 		else {
-			System.out.println(prendreParole()+"Aie")	}
+			System.out.println(prendreParole()+"Aie");	}
 		}
 		
 }
