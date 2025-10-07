@@ -6,7 +6,6 @@ public class Gaulois {
 	private int effetPotion = 1;
 
 	public Gaulois(String nom, int force) {
-		super();
 		this.nom = nom;
 		this.force = force;
 	}
@@ -16,17 +15,12 @@ public class Gaulois {
 	}
 
 	public void parler(String texte) {
-		System.out.println(prendreParole() + " ' " + texte + " ' ");
+		System.out.println(prendreParole() + "\"" + texte + "\"");
 
 	}
 
 	private String prendreParole() {
-		return "le Gaulois" + nom + ":";
-	}
-
-	public static void main(String[] args) {
-		Gaulois asterix = new Gaulois("Asterix", 8);
-		System.out.println(asterix.getNom());
+		return "le Gaulois" + nom + " : ";
 	}
 
 	@Override
@@ -35,7 +29,7 @@ public class Gaulois {
 	}
 
 	public void frapper(Romain romain) {
-		System.out.println(nom + "envoi un grand coup dans la machoire de " + romain.getNom());
+		System.out.println(nom + " envoi un grand coup dans la machoire de " + romain.getNom());
 		romain.recevoirCoup(force * effetPotion / 3);
 		 if (effetPotion > 1) {
 	            effetPotion--;
@@ -44,7 +38,11 @@ public class Gaulois {
 
 	public void boirePotion(int forcePotion) {
 		effetPotion =  forcePotion;
+	}
 
+	public static void main(String[] args) {
+		Gaulois asterix = new Gaulois("Asterix", 8);
+		System.out.println(asterix.getNom());
 	}
 
 }

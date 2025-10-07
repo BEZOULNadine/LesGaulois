@@ -18,22 +18,22 @@ public class Romain {
 	}
 
 	public void parler(String texte) {
-		System.out.println(prendreParole() + " ' " + texte + " ' ");
+		System.out.println(prendreParole() + "\"" + texte + "\"");
 
 	}
 
 	private String prendreParole() {
-		return "le Romain" + nom + ":" ;
+		return "le Romain " + nom + " : ";
 	}
 
 	public void recevoirCoup(int forceCoup) {
-		force-=forceCoup; //romain perd de la force 
-		if (force<1) {
-			force =0;
-			System.out.println(prendreParole()+"j'abondonne");		
+		force -= forceCoup; // romain perd de la force
+		if (force < 1) {
+			force = 0;
+			System.out.println(prendreParole() + " j'abondonne");
+		} else {
+			System.out.println(prendreParole() + " Aie");
 		}
-		else {
-			System.out.println(prendreParole()+"Aie");	}
-		}
-		
+	}
+
 }

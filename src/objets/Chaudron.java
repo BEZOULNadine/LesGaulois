@@ -1,18 +1,12 @@
-package personnages;
+package objets;
 
 public class Chaudron {
 	private int quantitePotion;
 	private int forcePotion;
 
-	public Chaudron() {
-		super();
-	}
-
-
 	public boolean restePotion() {
-		return quantitePotion>0;
+		return quantitePotion > 0;
 	}
-		
 
 	public void remplirChaudron(int quantite, int forcePotion) {
 		this.forcePotion = forcePotion;
@@ -20,24 +14,15 @@ public class Chaudron {
 
 	}
 
-	public int getQuantitePotion() {
-		return quantitePotion;
-	}
-
-	public int getForcePotion() {
-		return forcePotion;
-	}
 	public int prendreLouche() {
-		if (quantitePotion>0) {
+		if (quantitePotion > 0) {
 			quantitePotion--;
 			return forcePotion;
-			
-		}else {
+
+		} else {
 			return 0;
 		}
-		
-		
+
 	}
-	
 
 }
