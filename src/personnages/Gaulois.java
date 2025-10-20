@@ -31,18 +31,32 @@ public class Gaulois {
 	public void frapper(Romain romain) {
 		System.out.println(nom + " envoi un grand coup dans la machoire de " + romain.getNom());
 		romain.recevoirCoup(force * effetPotion / 3);
-		 if (effetPotion > 1) {
-	            effetPotion--;
-	        }
+		if (effetPotion > 1) {
+			effetPotion--;
+		}
 	}
 
 	public void boirePotion(int forcePotion) {
-		effetPotion =  forcePotion;
+		effetPotion = forcePotion;
 	}
 
 	public static void main(String[] args) {
 		Gaulois asterix = new Gaulois("Asterix", 8);
 		System.out.println(asterix.getNom());
 	}
+
+	public void sePresenter(Village village, boolean estChef) {
+	    if (estChef) {
+	        System.out.println("Le Gaulois " + nom + " : \"Bonjour, je m'appelle " + nom +
+	                ". Je suis le chef du village " + village.getNom() + ".\"");
+	    } else if (village != null) {
+	        System.out.println("Le Gaulois " + nom + " : \"Bonjour, je m'appelle " + nom +
+	                ". J'habite le village " + village.getNom() + ".\"");
+	    } else {
+	        System.out.println("Le Gaulois " + nom + " : \"Bonjour, je m'appelle " + nom +
+	                ". Je voyage de villages en villages.\"");
+	    }
+	}
+
 
 }
