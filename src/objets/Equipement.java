@@ -4,6 +4,7 @@ public enum Equipement {
 	CASQUE("casque"), BOUCLIER("bouclier");
 
 	private String nom;
+	// dans une enumeration le constructeur est prive on ne peut rein ne mettre en public ni protcted
 
 	Equipement(String nom) {
 		this.nom = nom;

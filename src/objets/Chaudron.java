@@ -5,7 +5,7 @@ public class Chaudron {
 	private int forcePotion;
 
 	public boolean restePotion() {
-		return quantitePotion > 0;
+		return quantitePotion == 0;
 	}
 
 	public void remplirChaudron(int quantite, int forcePotion) {

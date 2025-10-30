@@ -67,15 +67,15 @@ public class Village {
         Gaulois obelix = new Gaulois("Obélix", 25);
         village.ajouterVillageois(obelix);
 
-        System.out.println("\n🏘️ Liste des villageois :");
+        System.out.println("Liste des villageois :");
         village.afficherVillageois();
 
         Gaulois doublePolemix = new Gaulois("Doublepolémix", 4);
 
         System.out.println("Présentations :");
-        abraracourcix.sePresenter(village, true);   
-        asterix.sePresenter(village, false);        
-        doublePolemix.sePresenter(null, false);   
+        abraracourcix.sePresenter();   
+        asterix.sePresenter();        
+        doublePolemix.sePresenter();   
     }  
     
 }

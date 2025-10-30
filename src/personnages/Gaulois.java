@@ -4,6 +4,7 @@ public class Gaulois {
 	private String nom;
 	private int force;
 	private int effetPotion = 1;
+	private Village village;
 
 	public Gaulois(String nom, int force) {
 		this.nom = nom;
@@ -37,7 +38,7 @@ public class Gaulois {
 	}
 
 	public void boirePotion(int forcePotion) {
-		effetPotion = forcePotion;
+		this.effetPotion = forcePotion;
 	}
 
 	public static void main(String[] args) {
@@ -45,18 +46,19 @@ public class Gaulois {
 		System.out.println(asterix.getNom());
 	}
 
-	public void sePresenter(Village village, boolean estChef) {
-	    if (estChef) {
-	        System.out.println("Le Gaulois " + nom + " : \"Bonjour, je m'appelle " + nom +
-	                ". Je suis le chef du village " + village.getNom() + ".\"");
-	    } else if (village != null) {
-	        System.out.println("Le Gaulois " + nom + " : \"Bonjour, je m'appelle " + nom +
-	                ". J'habite le village " + village.getNom() + ".\"");
-	    } else {
-	        System.out.println("Le Gaulois " + nom + " : \"Bonjour, je m'appelle " + nom +
-	                ". Je voyage de villages en villages.\"");
-	    }
+	public void sePresenter() {
+		if (village == null) {
+			System.out.println("Le Gaulois " + nom + " : \"Bonjour, je m'appelle " + nom +
+					". Je voyage de villages en villages.\"");
+		} else if (village.getChef() == this) {
+			System.out.println("Le Gaulois " + nom + " : \"Bonjour, je m'appelle " + nom +
+					". Je suis le chef du village " + village.getNom() + ".\"");
+		} else {
+			System.out.println("Le Gaulois " + nom + " : \"Bonjour, je m'appelle " + nom +
+					". J'habite le village " + village.getNom() + ".\"");
+		}
 	}
-
-
 }
+
+
+
