@@ -14,8 +14,8 @@ public class TestGaulois {
 		obelix.parler("Bonjour " + asterix.getNom() + ". Ca te dirais d'aller chasser des sangliers ?");
 		asterix.parler("oui tres bonne idee");
 		Romain minus = new Romain("minus", 6);
-		System.out.println("Dans la foret " + asterix.getNom() + " et " + obelix.getNom() + " tombent nez a nez sur le romain "
-				+ minus.getNom());
+		System.out.println("Dans la foret " + asterix.getNom() + " et " + obelix.getNom()
+				+ " tombent nez a nez sur le romain " + minus.getNom());
 
 		for (int i = 0; i < 3; i++) {
 			asterix.frapper(minus);
