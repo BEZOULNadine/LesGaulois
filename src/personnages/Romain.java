@@ -37,7 +37,7 @@ public class Romain {
 	public void recevoirCoup(int forceCoup) {
 		assert forceCoup > 0 : "Erreur : force du coup non positive !";// pre condition
 		int ancienneForce = force;
-		force -= forceCoup; // romain perd de la force
+		force -= forceCoup; 
 		if (force < 1) {
 			force = 0;
 			System.out.println(prendreParole() + " j'abondonne");
@@ -50,6 +50,10 @@ public class Romain {
 
 	public static void main(String[] args) {
 		Romain minus = new Romain("Minus", 6);
+		   minus.sEquiper(Equipement.CASQUE);
+		    minus.sEquiper(Equipement.CASQUE);
+		    minus.sEquiper(Equipement.BOUCLIER);
+		    minus.sEquiper(Equipement.CASQUE);
 
 	}
 

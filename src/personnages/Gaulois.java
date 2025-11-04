@@ -5,15 +5,20 @@ public class Gaulois {
 	private int force;
 	private int effetPotion = 1;
 	private Village village;
+	private Gaulois chef;
 
 	public Gaulois(String nom, int force) {
 		this.nom = nom;
 		this.force = force;
+		
 	}
 
 	public String getNom() {
 		return nom;
 	}
+	public void setVillage(Village village) {
+        this.village = village;
+    }
 
 	public void parler(String texte) {
 		System.out.println(prendreParole() + "\"" + texte + "\"");

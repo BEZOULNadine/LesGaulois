@@ -10,7 +10,9 @@ public class Village {
         this.nom = nom;
         this.villageois = new Gaulois[nbVillageoisMax];
         this.chef = chef; 
+        chef.setVillage(this);
     }
+  
 
     public String getNom() {
         return nom;
@@ -19,11 +21,13 @@ public class Village {
     public Gaulois getChef() {
         return chef;
     }
+    
 
     public void ajouterVillageois(Gaulois gaulois) {
         if (nbVillageois < villageois.length) {
             villageois[nbVillageois] = gaulois;
             nbVillageois++;
+            gaulois.setVillage(this); 
         } else {
             System.out.println("Le village est plein !");
         }
